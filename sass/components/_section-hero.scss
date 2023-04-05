@@ -1,0 +1,45 @@
+.section-hero {
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	padding-left: 310px;
+	padding-right: 310px;
+	margin-bottom: 0;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-main.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.section-hero__title {
+	color: $text-white;
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.3;
+	text-align: center;
+	letter-spacing: 0.06em;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+.section-hero__button {
+	background-color: $secondary-color;
+	color: $text-white;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.9;
+	border: 0;
+	border-radius: 4px;
+	width: 261px;
+	padding: 10px 32px 10px 32px;
+	&:hover {
+		color: #188CE8;
+	}
+	&:focus {
+		color: #188CE8;
+	}
+	&:active {
+		color: $text-white;
+	}
+}

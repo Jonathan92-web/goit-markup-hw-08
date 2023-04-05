@@ -1,0 +1,48 @@
+.services {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 94px;
+	margin-bottom: 0;
+
+    .services__title {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	color: $primary-color;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.2;
+	margin-bottom: 55px;
+}
+}
+
+.service-cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.service-cards__card {
+	position: relative;
+	overflow: hidden;
+	>.service-cards__label {
+		position: absolute;
+		top: 224px;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		background-color: rgba(47, 48, 58, 0.8);
+		height: 70px;
+		color: $text-white;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
