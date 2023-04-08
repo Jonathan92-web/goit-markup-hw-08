@@ -46,3 +46,9 @@
 		align-items: center;
 	}
 }
+
+@media (max-width: 768px){
+	.section-2{
+		display: none;
+	}
+}
