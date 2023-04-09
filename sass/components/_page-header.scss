@@ -8,14 +8,17 @@
         line-height: 1.2;
     }
 
+.header-container{
+	display: flex;
+	align-items: center;
+}
 
 .header__navbar {
 	height: 80px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding-top: 32px;
-	padding-bottom: 32px;
+	
 	align-items: center;
 }
 .border-header {
@@ -30,11 +33,9 @@
 }
 
 .header__contacts {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	padding-left: 306px;
-	margin: 0;
+	
+	padding: 0;
+	margin: 0 0 0 auto;
 }
 
 .header__item {
@@ -52,29 +53,13 @@
 		color: $secondary-color;
 	}
 }
-.header__link--current {
-	color: $secondary-color;
-	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 44px;
-		bottom: 0;
-		display: inline-block;
-		width: 100%;
-		height: 4px;
-		background-color: $secondary-color;
-		border-radius: 2px;
-	}
-}
 }
 
 .header__contact__item{
 .header__contact__link {
 	color: $detail-color;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.1;
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	&:hover {
@@ -93,28 +78,75 @@
 }
 }
 
-@media (max-width: 768px){
-	.header__contacts {
-			display: flex;
-			flex-wrap: wrap ;
-			padding-left: 114px;
-			margin: 0;
+@media screen and (max-width: 767px) {
+	.header-container{
+		padding-top: 5px;
+			padding-bottom: 4px;
+			padding-right: 27px;
+	}
+	
+	.logo{
+		font-size: 24px;
+	}
+	.page-header{
+		height: 60px;
+	}
+	.header__navigation {
+			display: none;
 		}
-				.padding-left{
-					padding: 0;
-					margin-top: 10px;
-				}
-}
-
-@media(max-width: 480px){
-
-	.header__navigation{
+	.header__contacts {
 		display: none;
+	}
+		.header__navbar {
+			justify-content: left;
+			height: 60px;
+		}
+}
+@media screen and (min-width: 768px) {
+	.header-container	 {
+		
 	}
 	.header__contacts{
-		display: none;
+		display: flex;
+		flex-direction: column;
 	}
-		.header__navbar{
-			justify-content: left;
+		.header__contact__item:not(:last-child){
+			margin-bottom: 10px;
 		}
+			
+						.header__link--current {
+							color: $secondary-color;
+							position: relative;
+			
+							&::after {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 44px;
+								bottom: 0;
+								display: inline-block;
+								width: 100%;
+								height: 4px;
+								background-color: $secondary-color;
+								border-radius: 2px;
+							}
+						}
+												
+}
+
+@media screen and (min-width: 1200px){
+	.header__contacts{
+		flex-direction: row;
+		align-items: center;
+	}
+	.header__contact__item:not(:last-child){
+		margin-bottom: 0;
+		margin-right: 50px;
+	}
+	.header__contact__item{
+			.header__contact__link {
+					font-size: 14px;
+				}
+	}
+	
 }

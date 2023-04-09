@@ -24,8 +24,8 @@
     position: fixed;
     left: 50%;
     top: 50%;
-    width: 528px;
-    height: 581px;
+    width: 320px;
+    
     padding: 40px;
     background-color: $bg-card;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -36,7 +36,6 @@
 
 .btn-close--focused {
     position: absolute;
-    left: 490px;
     top: 8px;
     right: 8pX;
     width: 30px;
@@ -68,6 +67,7 @@
                     flex-direction: column;
                     color: $detail-color;
                     font-weight: 400;
+                    font-size: 12px;
                     letter-spacing: 0.01em;
                     margin-top: 10px;
                 }
@@ -152,7 +152,7 @@
 
 .policy-section__conditions {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: $detail-color;
@@ -170,8 +170,7 @@
     border-radius: 4px;
     width: 200px;
     padding: 10px 75px 10px 75px;
-    margin-top: 15px;
-    margin-left: 124px;
+   
 
     &:hover {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -181,16 +180,29 @@
         color: $secondary-color;
     }
 }
+.submit-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 
-@media (max-width: 768px) {
+@media screen and (min-width: 480px) {
     .modal {
         width: 450px;
-        height: 609px;
     }
-    .btn-close--focused {
-        left: 412px;
-    }
-        .form-submit{
-            margin-left: 90px;
-        }
+   
 }
+
+@media screen and (min-width: 1200px){
+    .modal{
+        width: 528px;
+    }
+    .contact-form__field{
+        .contact-form__icon{
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+
+

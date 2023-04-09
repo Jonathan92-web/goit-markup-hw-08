@@ -19,11 +19,30 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="header__navbar">
           <div class="header__logo">
             <a class="logo link" href="#">WebStudio</a>
           </div>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill=""
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
           <ul class="link header__navigation">
             <li class="header__item">
               <a
@@ -53,57 +72,41 @@
               >
             </li>
           </ul>
-          <div class="header">
-            <ul class="link header__contacts">
-              <li class="header__contact__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="header__contact__link link"
-                  ><svg class="header__contact__icon" width="16" height="12">
-                    <use href="./images/icons.svg#icon-email"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-              <li class="header__contact__item padding-left">
-                <a href="tel:+525555296000" class="header__contact__link link"
-                  ><svg class="header__contact__icon" width="10" height="16">
-                    <use href="./images/icons.svg#icon-icon-phone"></use>
-                  </svg>
-                  +52 55 5529 6000</a
-                >
-              </li>
-            </ul>
-          </div>
         </nav>
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill=""
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+
+        <ul class="link header__contacts">
+          <li class="header__contact__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="header__contact__link link"
+              ><svg class="header__contact__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header__contact__item padding-left">
+            <a href="tel:+525555296000" class="header__contact__link link"
+              ><svg class="header__contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-icon-phone"></use>
+              </svg>
+              +52 55 5529 6000</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
     <main>
       <section class="section-hero">
-        <h1 class="section-hero__title">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-        <div>
-          <button class="section-hero__button" type="button" data-modal-open>
-            Solicite nuestro servicio
-          </button>
+        <div class="container section-hero-container">
+          <h1 class="section-hero__title">
+            SOLUCIONES EFICACES PARA SU NEGOCIO
+          </h1>
+          <div>
+            <button class="section-hero__button" type="button" data-modal-open>
+              Solicite nuestro servicio
+            </button>
+          </div>
         </div>
       </section>
 
@@ -207,29 +210,29 @@
             <li class="team-cards__member">
               <picture>
                 <source
-                  media="(min-width: 769px)"
+                  media="(min-width: 1200px)"
                   srcset="
                     ./images/diseñadorproductos.jpg          1x,
                     ./images/desktop/product-designer_2x.jpg 2x
                   "
                 />
+
                 <source
-                  srcset="
-                    ./images/mobile/diseñador-producto1.jpg   1x,
-                    ./images/mobile/diseñador-producto@2x.jpg 1x
-                  "
-                  media="(max-width: 480px)"
-                />
-                <source
-                  media="(max-width: 768px)"
+                  media="(min-width: 768px)"
                   srcset="
                     ./images/tablet/diseñador-producto-tablet1.jpg   1x,
                     ./images/tablet/diseñador-producto-tablet@2x.jpg 2x
                   "
                 />
-
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/diseñador-producto1.jpg   1x,
+                    ./images/mobile/diseñador-producto@2x.jpg 1x
+                  "
+                />
                 <img
-                  src="./images/diseñadorproductos.jpg"
+                  src="#"
                   alt="diseñador
                   productos"
                 />
@@ -264,28 +267,28 @@
             <li class="team-cards__member">
               <picture>
                 <source
-                  media="(min-width: 769px)"
+                  media="(min-width: 1200px)"
                   srcset="
                     ./images/devfrontend.jpg             1x,
                     ./images/desktop/dev-frontend_2x.jpg 2x
                   "
                 />
+
                 <source
-                  media="(max-width: 480px)"
-                  srcset="
-                    ./images/mobile/dev-frontend1.jpg   1x,
-                    ./images/mobile/dev-frontend@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 768px)"
+                  media="(min-width: 768px)"
                   srcset="
                     ./images/tablet/dev-frontend-tablet1.jpg   1x,
                     ./images/tablet/dev-frontend-tablet@2x.jpg 2x
                   "
                 />
-
-                <img src="./images/devfrontend.jpg" alt="dev frontend" />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/dev-frontend1.jpg   1x,
+                    ./images/mobile/dev-frontend@2x.jpg 2x
+                  "
+                />
+                <img src="#" alt="dev frontend" />
               </picture>
               <div class="member-card-body">
                 <h3 class="member-card-body__name">Carla Palacios</h3>
@@ -317,29 +320,28 @@
             <li class="team-cards__member">
               <picture>
                 <source
-                  media="(min-width: 769px)"
+                  media="(min-width: 1200px)"
                   srcset="
                     ./images/marketing.jpg            1x,
                     ./images/desktop/marketing_2x.jpg 2x
                   "
                 />
-                <source
-                  media="(max-width: 480px)"
-                  srcset="
-                    ./images/mobile/marketing1.jpg   1x,
-                    ./images/mobile/marketing@2x.jpg 2x
-                  "
-                />
 
                 <source
-                  media="(max-width: 768px)"
+                  media="(min-width: 768px)"
                   srcset="
                     ./images/tablet/marketing-tablet1.jpg   1x,
                     ./images/tablet/marketing-tablet@2x.jpg 2x
                   "
                 />
-
-                <img src="./images/marketing.jpg" alt="marketing" />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/marketing1.jpg   1x,
+                    ./images/mobile/marketing@2x.jpg 2x
+                  "
+                />
+                <img src="#" alt="marketing" />
               </picture>
               <div class="member-card-body">
                 <h3 class="member-card-body__name">Mario Dorado</h3>
@@ -371,28 +373,28 @@
             <li class="team-cards__member">
               <picture>
                 <source
-                  media="(min-width: 769px)"
+                  media="(min-width: 1200px)"
                   srcset="
                     ./images/diseñadorIU.jpg           1x,
                     ./images/desktop/designerUI_2x.jpg 2x
                   "
                 />
+
                 <source
-                  media="(max-width: 480px)"
-                  srcset="
-                    ./images/mobile/designer1.jpg   1x,
-                    ./images/mobile/designer@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 768px)"
+                  media="(min-width: 768px)"
                   srcset="
                     ./images/tablet/designer-tablet1.jpg   1x,
                     ./images/tablet/designer-tablet@2x.jpg 2x
                   "
                 />
-
-                <img src="images/diseñadorIU.jpg" alt="diseñador IU" />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/designer1.jpg   1x,
+                    ./images/mobile/designer@2x.jpg 2x
+                  "
+                />
+                <img src="#" alt="diseñador IU" />
               </picture>
               <div class="member-card-body">
                 <h3 class="member-card-body__name">Pablo Mijangos</h3>
@@ -426,7 +428,7 @@
       </section>
     </main>
     <section class="section-4">
-      <div class="customers">
+      <div class="container">
         <h2 class="customers__title">CLIENTES REGULARES</h2>
         <ul class="link customer-logos">
           <li class="customer-logos__item--focused">
@@ -498,35 +500,38 @@
         </ul>
       </div>
     </section>
-    <div class="footer">
-      <footer class="container">
-        <a class="logo link" href="#"> WebStudio</a>
-        <address class="contact-footer">
-          <ul class="link footer-nav">
-            <li class="footer-nav__item">
-              <a
-                class="footer-nav__link link"
-                href="#"
-                target="_blank"
-                rel="noopner noreferrer"
-                >Calz.Ticoman 500, Ciudad de mexico, CDMX, Mexico</a
-              >
-            </li>
-            <li class="footer-nav__item">
-              <a
-                class="footer-nav__link--focused link"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="footer-nav__item">
-              <a class="footer-nav__link--focused link" href="+525555296000"
-                >+52 55 5529 6000</a
-              >
-            </li>
-          </ul>
-        </address>
 
+    <footer class="footer">
+      <div class="container container--footer">
+        <div class="footer__address">
+          <a class="footer__logo link" href="#"> WebStudio</a>
+          <address class="contact-footer">
+            <ul class="link footer-nav">
+              <li class="footer-nav__item">
+                <a
+                  class="footer-nav__link link"
+                  href="#"
+                  target="_blank"
+                  rel="noopner noreferrer"
+                  >Calz.Ticoman 500, Ciudad de mexico,<br />
+                  CDMX, Mexico</a
+                >
+              </li>
+              <li class="footer-nav__item">
+                <a
+                  class="footer-nav__link--focused link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link--focused link" href="+525555296000"
+                  >+52 55 5529 6000</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
         <div class="footer-social">
           <h3 class="footer-social__title">ENCUENTRENOS EN</h3>
           <div class="icons-socials">
@@ -562,6 +567,7 @@
               type="email"
               name="email"
               placeholder="Correo electrónico"
+              required
             />
             <button class="suscription-button" type="submit">
               Suscríbase
@@ -571,8 +577,9 @@
             </button>
           </form>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close--focused" type="button" data-modal-close>
@@ -594,8 +601,8 @@
             />
             <svg
               class="contact-form__icon contact-form__icon--focused"
-              width="18"
-              height="18"
+              width="12"
+              height="12"
             >
               <use href="./images/icons.svg#icon-form-name"></use>
             </svg>
@@ -610,8 +617,8 @@
               id="phone"
             /><svg
               class="contact-form__icon contact-form__icon--focused"
-              width="18"
-              height="18"
+              width="12"
+              height="12"
             >
               <use href="./images/icons.svg#icon-form-phone"></use>
             </svg>
@@ -626,8 +633,8 @@
               id="email"
             /><svg
               class="contact-form__icon contact-form__icon--focused"
-              width="18"
-              height="18"
+              width="12"
+              height="12"
             >
               <use href="./images/icons.svg#icon-form-mail"></use>
             </svg>
@@ -661,8 +668,9 @@
               y Condiciones.
             </span>
           </label>
-
-          <button class="form-submit" type="submit">Enviar</button>
+          <div class="submit-button">
+            <button class="form-submit" type="submit">Enviar</button>
+          </div>
         </form>
       </div>
     </div>
@@ -672,8 +680,8 @@
           fill=""
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="30"
+          height="30"
         >
           <path
             fill-rule="evenodd"
@@ -682,43 +690,49 @@
           ></path>
         </svg>
       </button>
-
-      <ul class="mobile-menu">
-        <li><a href="./index.html" class="link">Estudio</a></li>
-        <li>
-          <a href="./portfolio.html" class="link link--margin">Portafolio</a>
-        </li>
-        <li><a href="" class="link">Contactos</a></li>
-      </ul>
-      <ul class="mobile-menu-contact">
-        <li class="mobile-menu_item">
-          <a href="tel:+525555296000" class="mobile-menu_link">
-            +52 55 5529 6000</a
-          >
-        </li>
-        <li class="mobile-menu_item">
-          <a
-            href="mailto:info@devstudio.com"
-            class="mobile-menu_link mobile-menu_link--size"
-          >
-            info@devstudio.com</a
-          >
-        </li>
-      </ul>
-      <ul class="menu-mobile-social">
-        <li class="menu-mobile-social_item">
-          <a class="menu-mobile-social_link" href="">Instagram</a>
-        </li>
-        <li class="menu-mobile-social_item">
-          <a class="menu-mobile-social_link" href="">Twitter</a>
-        </li>
-        <li class="menu-mobile-social_item">
-          <a class="menu-mobile-social_link" href="">Facebook</a>
-        </li>
-        <li class="menu-mobile-social_item">
-          <a class="menu-mobile-social_link" href="">Linkedin</a>
-        </li>
-      </ul>
+      <div class="menu-container-mobile">
+        <ul class="mobile-menu">
+          <li><a href="./index.html" class="link">Estudio</a></li>
+          <li>
+            <a href="./portfolio.html" class="link link--margin">Portafolio</a>
+          </li>
+          <li><a href="" class="link">Contactos</a></li>
+        </ul>
+        <div>
+          <ul class="mobile-menu-contact">
+            <li class="mobile-menu_item">
+              <a
+                href="tel:+525555296000"
+                class="mobile-menu_link mobile-menu_link--size"
+              >
+                +52 55 5529 6000</a
+              >
+            </li>
+            <li class="mobile-menu_item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu_link mobile-menu_link--color"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-mobile-social">
+            <li class="menu-mobile-social_item">
+              <a class="menu-mobile-social_link" href="">Instagram</a>
+            </li>
+            <li class="menu-mobile-social_item">
+              <a class="menu-mobile-social_link" href="">Twitter</a>
+            </li>
+            <li class="menu-mobile-social_item">
+              <a class="menu-mobile-social_link" href="">Facebook</a>
+            </li>
+            <li class="menu-mobile-social_item">
+              <a class="menu-mobile-social_link" href="">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
