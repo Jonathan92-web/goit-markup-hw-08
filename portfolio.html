@@ -19,11 +19,30 @@
   </head>
   <body>
     <header class="border-header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="header__navbar">
           <div class="header__logo">
             <a class="logo link" href="./index.html">WebStudio</a>
           </div>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill=""
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
           <ul class="link header__navigation">
             <li class="header__item">
               <a
@@ -53,29 +72,27 @@
               >
             </li>
           </ul>
-          <div class="header">
-            <ul class="link header__contacts">
-              <li class="header__contact__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="header__contact__link link"
-                  ><svg class="header__contact__icon" width="16" height="12">
-                    <use href="./images/icons.svg#icon-email"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-              <li class="header__contact__item padding-left">
-                <a href="tel:+525555296000" class="header__contact__link link"
-                  ><svg class="header__contact__icon" width="10" height="16">
-                    <use href="./images/icons.svg#icon-icon-phone"></use>
-                  </svg>
-                  +52 55 5529 6000</a
-                >
-              </li>
-            </ul>
-          </div>
         </nav>
+        <ul class="link header__contacts">
+          <li class="header__contact__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="header__contact__link link"
+              ><svg class="header__contact__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header__contact__item padding-left">
+            <a href="tel:+525555296000" class="header__contact__link link"
+              ><svg class="header__contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-icon-phone"></use>
+              </svg>
+              +52 55 5529 6000</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
     <main>
